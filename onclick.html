@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>click on hardik to check</h3>
+    click here...<p id="h" onclick="test()">hardik</p>
+    write text in input to check
+    <input type="text" id="inp1" onkeyup="test1()">
+    <br><br>
+    and check here result
+    <textarea cols="30" rows="10" id="txt"></textarea>
+    <script>
+        var h1=document.getElementById('h');
+        function test(){
+            if(h1.innerHTML=="hardik"){
+                h1.innerHTML="rhea"
+            }
+            else{
+                h1.innerHTML="hardik"
+            }
+        }
+        var input_tag= document.getElementById('inp1');
+        var txt_tag= document.getElementById('txt');
+        function test1(){
+            txt_tag.innerHTML=input_tag.value
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    first name:<input type="text" id="inpt"/>
+    <button id="btn" onclick="submit()">submit</button>
+    <span id="spn"></span>
+    
+    
+    <script>
+        var inp = document.getElementById('inpt');
+        var buttn = document.getElementById('btn');
+        var sp = document.getElementById('spn');
+        function submit(){
+            if(inp.value=="")
+            {
+                spn.innerHTML="*required...!";
+                spn.style.color="red"
+            }
+            else{
+                buttn.innerHTML="submitted"
+                buttn.style.backgroundColor="green";
+                buttn.style.color="white";
+            }
+
+        }
+    </script>
+</body>
+</html>
