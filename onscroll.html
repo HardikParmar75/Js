@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .div{
+            background-color: blue;
+            text-align: center;
+            height: 200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            transition: .35s;
+            position: fixed ;
+        }
+        ul li{
+            display: inline;
+            list-style-type:none ;
+            padding: 20px;
+        }
+    </style>
 </head>
-<body>
-    <h1 id="nme" onscroll="scroll1()">Hardik</h1>
+<body onscroll="scroll1()">
+    <div class="div" id="div1">
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>service</li>
+            <li>contact us</li>
+            <li>about</li>
+        </ul>
+    </div>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
     
@@ -25,11 +52,29 @@
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex perferendis ab quasi, aperiam eos repudiandae nihil placeat quae omnis molestiae possimus voluptatibus. Inventore tempore nam voluptatum, architecto quasi ipsum dolore.</p>
+
     <script>
-        var name1= document.getElementById('nme');
+        var name1= document.getElementById('div1');
         function scroll1(){
-            name1.innerHTML="scrroll down";
-            name1.style.color="blue";
+            if(name1.style.height=="200px"){
+            name1.style.height="100px";
+            }
+            else{
+                name1.style.height="200px";
+            }
 
         }
     </script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       firstname: <input type="text" id="nm">
+       <span id="spn1"></span>
+       <input type="submit" onclick=" return validate()">
+    </form>
+    <script>
+       na1 = document.getElementById('nm');
+       sp1 = document.getElementById('spn1');
+       fnm_ex=/^[a-zA-Z]{2,8}$/;
+       function validate(){
+          if(na1.value==""){
+            sp1.innerHTML="*required";
+            sp1.style.color="red";
+            na1.style.border="2px solid red";
+            return false;
+        }
+        else if(!fnm_ex.test(na1.value)){
+            sp1.innerHTML="*min 2 and max 8 letters only...!";
+            sp1.style.color="red";
+            return false;
+        }
+        else{
+            sp1.innerHTML="";
+            na1.style.border="2px solid green";
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>

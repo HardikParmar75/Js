@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    firstname: <input type="text" id="fm" onblur="validate(fm,fnm)" >
+    <span id="fnm"></span>
+    <br>
+    <br>
+    last name: <input type="text" id="lm" onblur="validate(lm,lnm)">
+    <span id="lnm"></span>
+    </form>
+    <script>
+        function validate(tag,sp){
+            if(tag.value==""){
+                sp.innerHTML="*required"
+            }
+            else{
+                sp.innerHTML=""
+            }
+        }
+    </script>
+</body>
+</html>
