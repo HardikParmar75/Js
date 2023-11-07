@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    first: <input type="text" id="first" onblur="return error(first,sp1)"><span id="sp1"></span><br><br>
+    second: <input type="text" id="second" onblur="return error(second,sp2)"><span id="sp2"></span><br><br>
+    <button id="add" onclick=" return addition()">+</button>
+    <button id="sub" onclick=" return subtraction()">-</button>
+    <button id="mul" onclick=" return multiplication()">*</button>
+    <button id="div" onclick=" return division()">/</button>
+    <button id="mod" onclick=" return modulo()">%</button>
+    <br>
+    <br>
+    output is:<span id="output"></span><br>
+    <script>
+        Num=1,2,3;
+        var a = document.getElementById('first');
+        var b = document.getElementById('second');
+        function error(err,sp){
+            if(err.value==""){
+                sp.innerHTML="*required";
+                sp.style.color="red";
+                return false;
+            }
+            else if(err.value!=Num){
+                sp.innerHTML="*enter only numbers";
+                sp.style.color="red";
+                return false;
+            }
+            else
+            {
+                sp.innerHTML=""
+                return false;
+            }
+        }
+        function addition(){
+            if(sp.innerHTML==""){
+                output.innerHTML=a.value + b.value;
+                return false;
+            }
+        }
+        function subtraction(){
+            if(sp.innerHTML==""){
+                output.innerHTML=a.value - b.value;
+                return false;
+            }
+        }
+        function multiplication(){
+            if(sp.innerHTML==""){
+                output.innerHTML=a.value * b.value;
+                return false;
+            }
+        }
+        function division(){
+            if(sp.innerHTML==""){
+                output.innerHTML=a.value / b.value;
+                return false;
+            }
+        }
+        function modulo(){
+            if(sp.innerHTML==""){
+                output.innerHTML=a.value % b.value;
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
