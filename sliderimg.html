@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+        }
+        .main{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="main">
+        <img src="i1.jpg" alt="" height="400px">
+        <img src="smvs_swaminarayan_calendar_wallpaper_April_2023.jpg" alt="" height="400px">
+        <img src="i3.jpg" alt="" height="400px">
+        <img src="i4.jpg" alt="" height="400px">
+    </div>
+    <script>
+        imgs = document.getElementsByTagName('img');
+        index=0;
+        function slide(){
+            for(i=0;i<imgs.length;i++){
+                imgs[i].style.display="none";
+
+            }
+            imgs[index].style.display="block";
+            index++;
+            if(index==4){
+                index=0;
+            }
+            setTimeout("slide()",1000)
+        }
+        slide();
+    </script>
+</body>
+</html>
