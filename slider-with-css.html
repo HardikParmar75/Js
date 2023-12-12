@@ -19,13 +19,13 @@
         img {
             height: 80%;
             width: 100%;
-            padding: 55px; 
+            padding: 25px; 
             transition: .31s;
             display: flex;
             
         }
         .i1{
-            position: absolute;
+           transform: translateX(0px);
 
         }
 
@@ -62,7 +62,7 @@
 
 <body>
     <div class="maindiv">
-        <button class="btn1" onclick="slider()">
+        <button class="btn1" onclick="slider2()">
             &lt; </button>
                 <img src="i1.jpg" alt="" id="" class="i1">
                 <img src="i3.jpg" alt="" id="" class="i1">
@@ -74,25 +74,26 @@
         a = document.getElementsByClassName('i1')
         function slider() {
             for(i=0;i<a.length;i++){
-                a[i].style.left='-90%';
+                a[i].style.transform="translateX(-90%)";
+                a[i].style.
             }
-              a[index].style.left='0';
-            index++;
-             if(index== a.length){
-                 index=0;
-             }
+            //   a[index].style.transform='translateX(0px)';
+            // index++;
+            //  if(index== a.length){
+            //      index=0;
+            //  }
            
         }
 
         function slider2() {
             for(i=0;i<a.length;i++){
-                a[i].style.left='90%';
+                a[i].style.transform="translateX(0%)";
             }
-             a[index].style.left='0';
-            index++;
-              if(index== a.length){
-                  index=0;
-              }  
+            //  a[index].style.transform="translateX(0px)";;
+            // index++;
+            //   if(index== a.length){
+            //       index=0;
+            //   }  
            
         }
 
